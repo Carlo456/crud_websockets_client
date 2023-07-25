@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { io } from 'socket.io-client'
-
+const PROD_SERVER_URL = "https://crudwebsocketsserver-production.up.railway.app/"
 const SERVER_URL = "http://localhost:5000";
-const socket = io(SERVER_URL);
+const socket = io(PROD_SERVER_URL);
 
 const App = () => {
   const [message, setMessage] = useState('');
